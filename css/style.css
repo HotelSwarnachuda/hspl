@@ -23,19 +23,31 @@ ul {
 }
 
 /* -------------------------------Header----------------------------- */
+/* Fix Header Text */
 .header {
-    width: 100%;
-    height: 20vh;
     display: flex;
+    flex-wrap: wrap; /* Allow text to wrap */
+    justify-content: center; /* Center align for smaller screens */
     align-items: center;
-    padding: 0 30px;
+    padding: 0 10px; /* Adjust padding */
+    height: auto; /* Remove fixed height for responsiveness */
+    text-align: center;
 }
 
 #mk, #hotels {
     font-size: 4rem;
     font-weight: bold;
     font-family: sans-serif;
+    margin: 0;
 }
+
+@media (max-width: 600px) {
+    #mk, #hotels {
+        font-size: 2.5rem; /* Smaller font for mobile */
+        line-height: 1.2; /* Fix text height */
+    }
+}
+
 
 #mk {
     color: #FFCB05;
@@ -45,11 +57,6 @@ ul {
     color: #404040;
 }
 
-@media (max-width: 400px) {
-    #mk, #hotels {
-        font-size: 3rem;
-    }
-}
 
 /* -------------------------------Navigation----------------------------- */
 .nav {
@@ -284,6 +291,34 @@ ul {
 .close a {
     color: white;
     text-decoration: none;
+}
+
+/* -------------------------------Room deal and staff images----------------------------- */
+/* Responsive Images */
+.room-deal img,
+.staff img {
+    width: 100%; /* Default to full width for responsiveness */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center images */
+    box-shadow: 0 0 5px black;
+}
+
+/* Fix Founder's Image to 800x800 on Desktop */
+@media (min-width: 1024px) { /* Desktop view */
+    .staff img {
+        width: 800px;
+        height: 800px;
+    }
+}
+
+@media (max-width: 600px) {
+    .staff img {
+        width: 90%; /* Slight margin for smaller screens */
+    }
+    .room-deal img {
+        width: 95%; /* Adjust image size */
+    }
 }
 
 
