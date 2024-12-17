@@ -419,6 +419,27 @@ ul {
     }
 }
 
+/* -------------------------------Rate Us on Play Store----------------------------- */
+.rate-button {
+    display: inline-block;
+    background-color: #ffcb05; /* Bright yellow color for visibility */
+    color: #000; /* Black text for contrast */
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.rate-button:hover {
+    background-color: #e5b604; /* Slightly darker yellow */
+    transform: translateY(-3px); /* Lift the button slightly on hover */
+    text-decoration: none;
+    color: #000;
+}
+
+
 /* -------------------------------Footer----------------------------- */
 .footer {
     background-color: #111111;
