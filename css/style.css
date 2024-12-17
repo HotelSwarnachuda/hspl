@@ -258,6 +258,7 @@ ul {
 
 
 /* -------------------------------Modal----------------------------- */
+/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -272,12 +273,64 @@ ul {
 }
 
 .modal img {
-    max-width: 90%;
-    max-height: 90%;
+    display: block; /* Ensure images are visible */
+    max-width: 90%; /* Limit image width to 90% of viewport */
+    max-height: 95vh; /* Limit image height to 90% of viewport height */
+    margin: auto; /* Center the image */
+    object-fit: contain; /* Ensure image fits without being cut off */
+    cursor: pointer; /* Ensure cursor visibility */
 }
+
 
 .modal:target {
     display: flex;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+}
+
+.slides img {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.slides img.active {
+    display: block; /* Show active image */
+}
+
+/* Navigation Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev, .next, .close a {
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+
+.prev:hover, .next:hover {
+    color: #FFD700;
 }
 
 .close {
