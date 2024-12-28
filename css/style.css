@@ -127,6 +127,7 @@ ul {
 
 #loremp {
     font-size: 1.5rem;
+    color: gray;
 }
 
 @media (max-width: 560px) {
