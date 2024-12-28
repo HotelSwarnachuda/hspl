@@ -102,17 +102,34 @@ ul {
     overflow: hidden;
 }
 
-.imag {
+.imag.desktop {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.7); /* Darken the image */
 }
+
+.imag.mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7); /* Darken the image */
+}
+
+
 
 .imgtext {
     position: absolute;
     top: 20%;
-    left: 10%;
-    color: white;
+    left: 5%;
+    color: #fff; /* Text color */
+    /* text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); Slight text shadow */
+    z-index: 1; 
+  
+    /* Add background overlay */
+    /* background: rgba(0, 0, 0, 0.5); Semi-transparent black */
+    /* padding: 40px; Add padding around the text */
+    /* border-radius: 5px; Optional: Round corners */
 }
 
 #wel {
@@ -127,10 +144,11 @@ ul {
 
 #loremp {
     font-size: 1.5rem;
-    color: gray;
 }
 
 @media (max-width: 560px) {
+
+    
     #wel {
         font-size: 1.5rem;
         margin-bottom: 30px;

@@ -31,8 +31,24 @@
             <br>
             <h1 id="h1">Your Luxury Destination <br> since 1994</h1>
             <p id="loremp">Discover a peaceful retreat in the heart of Balasore. <br> Enjoy affordable luxury and exceptional hospitality for an unforgettable stay.</p>
-        </span>
-        <img src="images/slider.jpg" class="imag">
+        </span>    
+        
+        <!-- Desktop Image (shown by default) -->
+        <img 
+          src="images/slider.jpg" 
+          class="imag desktop" 
+          alt="Desktop Image" 
+          style="display: block;"
+        >
+    
+        <!-- Mobile Image (hidden by default) -->
+        <img 
+          src="images/mobile-slider.jpg" 
+          class="imag mobile" 
+          alt="Mobile Image"
+          style="display: none;"
+        >
+
     </div>
     <div class="banner">
         <span class="bspan"><i class="hotelsym fas fa-utensils"></i> Exceptional Dining</span>
@@ -211,6 +227,31 @@
         </div>
     </footer>
 <script src="fonts/all.js"></script>
+
+<script>
+    function swapImages() {
+      const desktopImage = document.querySelector('.imag.desktop');
+      const mobileImage  = document.querySelector('.imag.mobile');
+      
+      // Check the current window width
+      const screenWidth = window.innerWidth;
+      
+      // Decide which image to show based on width
+      if (screenWidth <= 560) {
+        desktopImage.style.display = 'none';
+        mobileImage.style.display = 'block';
+      } else {
+        desktopImage.style.display = 'block';
+        mobileImage.style.display = 'none';
+      }
+    }
+
+    // Run swapImages when the page is fully loaded
+    document.addEventListener('DOMContentLoaded', swapImages);
+
+    // (Optional) Run swapImages on window resize to handle dynamic resizing
+    window.addEventListener('resize', swapImages);
+  </script>
 
 <script>
     let slideIndex = 0;
