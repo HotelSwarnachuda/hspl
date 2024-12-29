@@ -301,30 +301,17 @@ ul {
 }
 
 .modal img {
-    max-width: 90%;
-    max-height: 95vh;
-    border-radius: 10px;
-    object-fit: contain;
-    cursor: pointer;
+    display: block; /* Ensure images are visible */
+    max-width: 90%; /* Limit image width to 90% of viewport */
+    max-height: 95vh; /* Limit image height to 90% of viewport height */
+    margin: auto; /* Center the image */
+    object-fit: contain; /* Ensure image fits without being cut off */
+    cursor: pointer; /* Ensure cursor visibility */
 }
+
 
 .modal:target {
     display: flex;
-}
-
-/* Close Button */
-.close {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    font-size: 3rem;
-    color: #fff;
-    cursor: pointer;
-}
-
-.close a {
-    color: #fff;
-    text-decoration: none;
 }
 
 /* Carousel */
@@ -342,7 +329,7 @@ ul {
 }
 
 .slides img.active {
-    display: block;
+    display: block; /* Show active image */
 }
 
 /* Navigation Arrows */
@@ -365,9 +352,28 @@ ul {
     right: 10px;
 }
 
+.prev, .next, .close a {
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+
 .prev:hover, .next:hover {
     color: #FFD700;
 }
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 3rem;
+    color: white;
+}
+
+.close a {
+    color: white;
+    text-decoration: none;
+}
+
 
 /* -------------------------------Room deal and staff images----------------------------- */
 
