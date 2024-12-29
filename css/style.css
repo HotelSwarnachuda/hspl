@@ -517,6 +517,22 @@ ul {
     left: 0;
     font-weight: bold;
     color: #ffcb05; /* Use brand color for bullets */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-content ol li:hover {
+    background-color: #ffcb05; /* Highlight background */
+    color: #fff; /* Change text color */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    padding: 5px; /* Optional: Add slight padding for the effect */
+    transition: all 0.3s ease; /* Smooth transition effect */
+    z-index: 1; /* Ensure it visually comes on top */
+}
+
+/* Ensure the number is part of the hover */
+.about-content ol li:hover::before {
+    opacity: 0; /* Hide the number */
+    visibility: hidden; /* Ensure the number is not interactable */
 }
 
 /* Responsive Design for Smaller Screens */
@@ -530,12 +546,26 @@ ul {
         text-align: center; /* Center-align text on small screens */
     }
 
+
     .about-content h1 {
         text-align: center; /* Center-align the heading */
+        font-size: 2rem; /* Larger heading */
+    }
+    
+    .about-content p {
+        font-size: 1.1rem; /* Comfortable font size for the intro paragraph */
+        line-height: 1.3; /* Increase line spacing for better readability */
     }
 
     .about-image img {
         margin-bottom: 20px; /* Add space below the image */
+    }
+
+    .about-content ol li {
+        font-size: 1rem; /* Slightly larger font size for list items */
+        
+        line-height: 1.2; /* Improve spacing between lines */
+        
     }
 }
 
