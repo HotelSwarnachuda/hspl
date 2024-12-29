@@ -25,6 +25,19 @@ ul {
 }
 
 /* -------------------------------Header----------------------------- */
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(20px); /* Slide up effect */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Final position */
+    }
+}
+
+/* Header Styling with Animation */
 .header {
     display: flex;
     flex-wrap: wrap;
@@ -35,27 +48,31 @@ ul {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#hotels, #mk {
+#hotels, #hspl {
     font-size: 4rem;
     font-weight: bold;
     margin: 0;
+    animation: fadeInUp 1s ease-in-out; /* Apply animation */
 }
 
-#mk {
+#hspl {
     color: #FFCB05;
     margin-left: 10px;
+    animation-delay: 0.2s; /* Slight delay for staggered effect */
 }
 
 #hotels {
     color: #404040;
 }
 
+/* Responsive Styling */
 @media (max-width: 600px) {
-    #hotels, #mk {
+    #hotels, #hspl {
         font-size: 2.5rem;
         line-height: 1.2;
     }
 }
+
 
 /* -------------------------------Navigation----------------------------- */
 .nav {
