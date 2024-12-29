@@ -103,55 +103,65 @@ ul {
     overflow: hidden;
 }
 
-.imag.desktop, .imag.mobile {
+.imag.desktop {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.7);
-    transition: opacity 0.5s ease;
+    filter: brightness(0.7); /* Darken the image */
 }
+
+.imag.mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7); /* Darken the image */
+}
+
+
 
 .imgtext {
     position: absolute;
     top: 20%;
     left: 5%;
-    color: #fff;
-    z-index: 2;
-    max-width: 50%;
+    color: #fff; /* Text color */
+    /* text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); Slight text shadow */
+    z-index: 1; 
+  
+    /* Add background overlay */
+    /* background: rgba(0, 0, 0, 0.5); Semi-transparent black */
+    /* padding: 40px; Add padding around the text */
+    /* border-radius: 5px; Optional: Round corners */
 }
 
-.imgtext p#wel {
+#wel {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
-.imgtext h1#h1 {
+#h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.imgtext p#loremp {
+#loremp {
     font-size: 1.5rem;
 }
 
 @media (max-width: 560px) {
-    .imgtext {
-        max-width: 90%;
-        top: 15%;
-        left: 5%;
-    }
 
-    .imgtext p#wel {
+    
+    #wel {
         font-size: 1.5rem;
-        margin-bottom: 30px;
+        margin-bottom: 115px;
     }
 
-    .imgtext h1#h1 {
+    #h1 {
+        margin-top: 30px;
         font-size: 2rem;
         margin-bottom: 15px;
     }
 
-    .imgtext p#loremp {
+    #loremp {
         font-size: 1rem;
     }
 }
