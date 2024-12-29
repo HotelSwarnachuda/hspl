@@ -1,21 +1,23 @@
+/* -------------------------------Reset & General Styles----------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* -------------------------------General Styles----------------------------- */
+/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: inherit;
 }
 
 ul {
@@ -23,74 +25,73 @@ ul {
 }
 
 /* -------------------------------Header----------------------------- */
-/* Fix Header Text */
 .header {
     display: flex;
-    flex-wrap: wrap; /* Allow text to wrap */
-    justify-content: center; /* Center align for smaller screens */
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    padding: 0 10px; /* Adjust padding */
-    height: auto; /* Remove fixed height for responsiveness */
-    text-align: center;
+    padding: 20px 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#mk, #hotels {
+#hotels, #mk {
     font-size: 4rem;
     font-weight: bold;
-    font-family: sans-serif;
     margin: 0;
 }
 
-@media (max-width: 600px) {
-    #mk, #hotels {
-        font-size: 2.5rem; /* Smaller font for mobile */
-        line-height: 1.2; /* Fix text height */
-    }
-}
-
-
 #mk {
     color: #FFCB05;
+    margin-left: 10px;
 }
 
 #hotels {
     color: #404040;
 }
 
+@media (max-width: 600px) {
+    #hotels, #mk {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+}
 
 /* -------------------------------Navigation----------------------------- */
 .nav {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: black;
-    display: flex;
-    justify-content: center;
+    background-color: #000;
     z-index: 1000;
 }
 
-.ul {
+.nav-list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
     padding: 10px 0;
 }
 
-.li {
-    color: white;
+.nav-item {
+    margin: 0 15px;
     font-size: 1.2rem;
+    color: #fff;
     transition: color 0.3s;
 }
 
-.li:hover {
-    color: sandybrown;
+.nav-item:hover {
+    color: #F4A460; /* Sandy Brown */
 }
 
 @media (max-width: 700px) {
-    .ul {
+    .nav-list {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin: 10px 0;
     }
 }
 
@@ -102,65 +103,55 @@ ul {
     overflow: hidden;
 }
 
-.imag.desktop {
+.imag.desktop, .imag.mobile {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.7); /* Darken the image */
+    filter: brightness(0.7);
+    transition: opacity 0.5s ease;
 }
-
-.imag.mobile {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.7); /* Darken the image */
-}
-
-
 
 .imgtext {
     position: absolute;
     top: 20%;
     left: 5%;
-    color: #fff; /* Text color */
-    /* text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); Slight text shadow */
-    z-index: 1; 
-  
-    /* Add background overlay */
-    /* background: rgba(0, 0, 0, 0.5); Semi-transparent black */
-    /* padding: 40px; Add padding around the text */
-    /* border-radius: 5px; Optional: Round corners */
+    color: #fff;
+    z-index: 2;
+    max-width: 50%;
 }
 
-#wel {
+.imgtext p#wel {
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-#h1 {
+.imgtext h1#h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-#loremp {
+.imgtext p#loremp {
     font-size: 1.5rem;
 }
 
 @media (max-width: 560px) {
-
-    
-    #wel {
-        font-size: 1.5rem;
-        margin-bottom: 44px;
+    .imgtext {
+        max-width: 90%;
+        top: 15%;
+        left: 5%;
     }
 
-    #h1 {
-        margin-top: 30px;
+    .imgtext p#wel {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .imgtext h1#h1 {
         font-size: 2rem;
         margin-bottom: 15px;
     }
 
-    #loremp {
+    .imgtext p#loremp {
         font-size: 1rem;
     }
 }
@@ -169,7 +160,7 @@ ul {
 .banner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background-color: #FFD01D;
     padding: 20px;
@@ -188,6 +179,7 @@ ul {
     border-radius: 50%;
     padding: 10px;
     margin-right: 10px;
+    color: #fff;
 }
 
 @media (max-width: 900px) {
@@ -214,70 +206,74 @@ ul {
 .rooms {
     text-align: center;
     padding: 50px 20px;
+    background-color: #fff;
 }
 
 .rooms h1 {
-    font-size: 6vh; /* Reduced from 10vh to 6vh */
+    font-size: 3rem;
     font-weight: bold;
-}
-
-.rooms p {
-    font-size: 2.5vh; /* Reduced description font size */
     margin-bottom: 20px;
 }
 
-.roomimages {
+.rooms p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.room-images {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
     justify-items: center;
 }
 
-.innerimg {
-    width: 300px;
-    height: auto;
-    box-shadow: 0 0 5px black;
-    border-radius: 5px;
-    text-align: center;
-    padding: 15px; /* Add padding for spacing */
-    background-color: #fff; /* Clean background */
-    transition: transform 0.3s ease;
-}
-
-.innerimg img {
+.image-card {
     width: 100%;
-    height: 200px; /* Fix image height */
-    object-fit: cover; /* Maintain aspect ratio */
-    border-radius: 5px;
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.h11 {
-    margin-top: 10px;
-    font-size: 1rem; /* Reduced font size for room type */
+.image-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.room-type {
+    font-size: 1rem;
     font-weight: bold;
-    color: black;
+    color: #333;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
 
-.h11 i {
-    font-size: 1.2rem; /* Reduced icon size */
-    color: black;
+.room-type i {
+    color: #FFD700; /* Gold color for icons */
 }
 
-.pricetag {
-    margin-top: 5px;
-    font-size: 0.9rem; /* Reduced price font size */
-    color: #333;
+.price-tag {
+    font-size: 0.9rem;
+    color: #555;
 }
 
-.innerimg:hover {
+.image-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
-
 
 /* -------------------------------Modal----------------------------- */
 /* Modal */
@@ -295,17 +291,30 @@ ul {
 }
 
 .modal img {
-    display: block; /* Ensure images are visible */
-    max-width: 90%; /* Limit image width to 90% of viewport */
-    max-height: 95vh; /* Limit image height to 90% of viewport height */
-    margin: auto; /* Center the image */
-    object-fit: contain; /* Ensure image fits without being cut off */
-    cursor: pointer; /* Ensure cursor visibility */
+    max-width: 90%;
+    max-height: 95vh;
+    border-radius: 10px;
+    object-fit: contain;
+    cursor: pointer;
 }
-
 
 .modal:target {
     display: flex;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close a {
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Carousel */
@@ -323,7 +332,7 @@ ul {
 }
 
 .slides img.active {
-    display: block; /* Show active image */
+    display: block;
 }
 
 /* Navigation Arrows */
@@ -346,26 +355,8 @@ ul {
     right: 10px;
 }
 
-.prev, .next, .close a {
-    cursor: pointer; /* Change cursor to pointer */
-}
-
-
 .prev:hover, .next:hover {
     color: #FFD700;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 3rem;
-    color: white;
-}
-
-.close a {
-    color: white;
-    text-decoration: none;
 }
 
 /* -------------------------------Room deal and staff images----------------------------- */
@@ -405,14 +396,13 @@ ul {
 }
 
 
-
-
-/* -------------------------------About----------------------------- */
+/* -------------------------------About Section----------------------------- */
 .about {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 20px;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
 }
 
 .about img {
@@ -420,10 +410,13 @@ ul {
     max-width: 30%;
     height: auto;
     margin: 0 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-p {
-    flex: 1 1 600px;
+    flex: 2 1 600px;
+    text-align: left;
 }
 
 .about-p h1 {
@@ -432,11 +425,14 @@ ul {
 }
 
 .about-p p {
+    font-size: 1rem;
+    color: #555;
     margin-bottom: 20px;
 }
 
-.about ol {
+.about-p ol {
     padding-left: 20px;
+    color: #555;
 }
 
 @media (max-width: 660px) {
@@ -449,45 +445,154 @@ ul {
     }
 }
 
-/* -------------------------------Rate Us on Play Store----------------------------- */
+/* -------------------------------Customer Feedback----------------------------- */
+.customer-feedback {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.customer-feedback h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.feedback-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.feedback-item {
+    width: 250px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feedback-item i {
+    font-size: 3rem;
+    color: #FFD700; /* Gold color for icons */
+    margin-bottom: 15px;
+}
+
+.feedback-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.reviewer-name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.feedback-item:hover {
+    transform: translateY(-10px);
+}
+
+/* -------------------------------Rate Us Section----------------------------- */
+.rate-us {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.rate-us h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.rate-us p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.rate-button-container {
+    text-align: center;
+}
+
 .rate-button {
     display: inline-block;
-    background-color: #ffcb05; /* Bright yellow color for visibility */
-    color: #000; /* Black text for contrast */
+    background-color: #ffcb05;
+    color: #000;
     font-size: 1rem;
     padding: 10px 20px;
     border-radius: 5px;
-    text-decoration: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .rate-button:hover {
-    background-color: #e5b604; /* Slightly darker yellow */
-    transform: translateY(-3px); /* Lift the button slightly on hover */
-    text-decoration: none;
+    background-color: #e5b604;
+    transform: translateY(-3px);
     color: #000;
 }
 
-
 /* -------------------------------Footer----------------------------- */
-.footer {
+footer {
     background-color: #111111;
     color: white;
-    padding: 20px;
-    text-align: center;
 }
 
-.footer .foo1, .footer .foo3 {
+.footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.footer-section {
+    flex: 1 1 300px;
+    margin: 20px;
+}
+
+.footer-section h1 {
+    font-size: 1.5rem;
     margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links li a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links li a:hover {
+    color: #FFD700;
 }
 
 .footer2 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #202020;
     padding: 10px 20px;
-    color: white;
+}
+
+.footer2 .foo2a, .footer2 .foo2b {
+    font-size: 0.9rem;
+}
+
+.footer2 .foo2b a {
+    color: #FFD700;
+    cursor: pointer;
 }
 
 @media (max-width: 700px) {
@@ -496,9 +601,13 @@ ul {
         align-items: center;
         text-align: center;
     }
+
+    .footer2 .foo2a, .footer2 .foo2b {
+        margin-bottom: 10px;
+    }
 }
 
-/* Prevent Horizontal Scrolling */
+/* -------------------------------Prevent Horizontal Scrolling----------------------------- */
 html, body {
     overflow-x: hidden;
 }

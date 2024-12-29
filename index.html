@@ -1,106 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Swarnachuda</title>
     <link rel="icon" type="image/png" href="images/hotel-swarnachuda-logo.png">
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="fonts/all.css">
+    <!-- External CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-    
 <body>
+    <!-- Header -->
     <header class="header">
         <span id="hotels">HOTEL</span><span id="mk">SWARNACHUDA</span>
     </header>
+
+    <!-- Navigation -->
     <nav class="nav">
-        <ul class="ul">
-            <li class="li"><a href="#home">HOME</a></li>
-            <li class="li"><a href="#rooms">ROOMS</a></li>
-            <li class="li"><a href="#whychooseus">WHY CHOOSE US</a></li>
-            <li class="li"><a href="#founder">FOUNDER</a></li>
-            <li class="li"><a href="#contact">CONTACT US</a></li>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#home">HOME</a></li>
+            <li class="nav-item"><a href="#rooms">ROOMS</a></li>
+            <li class="nav-item"><a href="#whychooseus">WHY CHOOSE US</a></li>
+            <li class="nav-item"><a href="#founder">FOUNDER</a></li>
+            <li class="nav-item"><a href="#contact">CONTACT US</a></li>
         </ul>
     </nav>
-    
-    <div id="home" class="slider">
-        <span class="imgtext">
+
+    <!-- Slider Section -->
+    <section id="home" class="slider">
+        <div class="imgtext">
             <p id="wel">Welcome to</p>
-            <br>
-            <br>
             <h1 id="h1">Your Luxury Destination <br> since 1994</h1>
             <p id="loremp">Discover a peaceful retreat in the heart of Balasore. <br> Enjoy affordable luxury and exceptional hospitality for an unforgettable stay.</p>
-        </span>    
-        
-        <!-- Desktop Image (shown by default) -->
+        </div>    
+
+        <!-- Desktop Image -->
         <img 
-          src="images/slider.jpg" 
-          class="imag desktop" 
-          alt="Desktop Image" 
-          style="display: block;"
-        >
-    
-        <!-- Mobile Image (hidden by default) -->
-        <img 
-          src="images/mobile-slider.JPG" 
-          class="imag mobile" 
-          alt="Mobile Image"
-          style="display: none;"
+            src="images/slider.jpg" 
+            class="imag desktop" 
+            alt="Desktop Image"
         >
 
-    </div>
-    <div class="banner">
+        <!-- Mobile Image -->
+        <img 
+            src="images/mobile-slider.JPG" 
+            class="imag mobile" 
+            alt="Mobile Image"
+        >
+    </section>
+
+    <!-- Banner Section -->
+    <section class="banner">
         <span class="bspan"><i class="hotelsym fas fa-utensils"></i> Exceptional Dining</span>
         <span class="bspan"><i class="hotelsym fas fa-bed"></i> Premium Rooms</span>
         <span class="bspan"><i class="hotelsym fas fa-glass-martini-alt"></i> Exclusive Bar</span>
         <span class="bspan"><i class="hotelsym fas fa-parking"></i> Free Parking</span>
-    </div>
-    
-    <div id="rooms" class="rooms">
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="rooms">
         <h1>OUR ROOMS</h1>
         <p>Choose from our range of luxurious rooms, tailored to meet your needs and ensure a comfortable stay. We offer a checkout time of 24 hours, and all the prices are inclusive of all taxes :)</p>
-        <div class="roomimages">
+        <div class="room-images">
             <!-- Room 1: Non-AC (Dix) -->
-            <a href="#img1" class="innerimg">
-                <img src="images/room-1.jpg" alt="Non-AC (Dix)">
-                <p class="h11"><i class="fas fa-bed"></i> Non-AC (Dix) Single/Double Room</p>
-                <p class="pricetag">₹ 672</p>
-            </a>
+            <div class="image-card">
+                <a href="#img1">
+                    <img src="images/room-1.jpg" alt="Non-AC (Dix)">
+                    <div class="card-content">
+                        <p class="room-type"><i class="fas fa-bed"></i> Non-AC (Dix) Single/Double Room</p>
+                        <p class="price-tag">₹ 672</p>
+                    </div>
+                </a>
+            </div>
             <!-- Room 2: Non-AC (VIP) -->
-            <a href="#img2" class="innerimg">
-                <img src="images/room-2.jpg" alt="Non-AC (VIP)">
-                <p class="h11"><i class="fas fa-user-friends"></i> Non-AC (VIP) Room</p>
-                <p class="pricetag">₹ 896</p>
-            </a>
+            <div class="image-card">
+                <a href="#img2">
+                    <img src="images/room-2.jpg" alt="Non-AC (VIP)">
+                    <div class="card-content">
+                        <p class="room-type"><i class="fas fa-user-friends"></i> Non-AC (VIP) Room</p>
+                        <p class="price-tag">₹ 896</p>
+                    </div>
+                </a>
+            </div>
             <!-- Room 3: AC Single/Double Room -->
-            <a href="#img3" class="innerimg">
-                <img src="images/room-3.jpg" alt="AC Single/Double">
-                <p class="h11"><i class="fas fa-snowflake"></i> AC Single/Double Room</p>
-                <p class="pricetag">₹ 1344</p>
-            </a>
+            <div class="image-card">
+                <a href="#img3">
+                    <img src="images/room-3.jpg" alt="AC Single/Double">
+                    <div class="card-content">
+                        <p class="room-type"><i class="fas fa-snowflake"></i> AC Single/Double Room</p>
+                        <p class="price-tag">₹ 1344</p>
+                    </div>
+                </a>
+            </div>
             <!-- Room 4: AC (Dix) Single/Double -->
-            <a href="#img4" class="innerimg">
-                <img src="images/room-4.jpg" alt="AC (Dix)">
-                <p class="h11"><i class="fas fa-snowflake"></i> AC (Dix) Room</p>
-                <p class="pricetag">₹ 1564</p>
-            </a>
+            <div class="image-card">
+                <a href="#img4">
+                    <img src="images/room-4.jpg" alt="AC (Dix)">
+                    <div class="card-content">
+                        <p class="room-type"><i class="fas fa-snowflake"></i> AC (Dix) Room</p>
+                        <p class="price-tag">₹ 1564</p>
+                    </div>
+                </a>
+            </div>
             <!-- Room 5: AC (VIP) Single/Double -->
-            <a href="#img5" class="innerimg">
-                <img src="images/room-5.jpg" alt="AC (VIP)">
-                <p class="h11"><i class="fas fa-crown"></i> AC (VIP) Room</p>
-                <p class="pricetag">₹ 1904</p>
-            </a>
+            <div class="image-card">
+                <a href="#img5">
+                    <img src="images/room-5.jpg" alt="AC (VIP)">
+                    <div class="card-content">
+                        <p class="room-type"><i class="fas fa-crown"></i> AC (VIP) Room</p>
+                        <p class="price-tag">₹ 1904</p>
+                    </div>
+                </a>
+            </div>
             <!-- Room 6: AC Suite -->
-            <a href="#img6" class="innerimg">
-                <img src="images/room-6.jpg" alt="AC Suite">
-                <p class="h11"><i class="fas fa-star"></i> AC Suite</p>
-                <p class="pricetag">₹ 2799</p>
-            </a>
+            <div class="image-card">
+                <a href="#img6">
+                    <img src="images/room-6.jpg" alt="AC Suite">
+                    <div class="card-content">
+                        <p class="room-type"><i class="fas fa-star"></i> AC Suite</p>
+                        <p class="price-tag">₹ 2799</p>
+                    </div>
+                </a>
+            </div>
         </div>
-    </div>
-    
+    </section>
+
     <!-- Modals for Enlarged Images -->
+    <!-- Modal Structure -->
     <div id="img1" class="modal">
         <span class="close"><a href="#rooms">&times;</a></span>
         <img src="images/room-1.jpg" alt="Non-AC (Dix)">
@@ -134,15 +161,16 @@
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
     </div>
-        
 
-    
-    <div class="room-deal">
+    <!-- Room Deal Section -->
+    <section class="room-deal">
         <img src="images/room-deal.jpg" id="imgdeal" alt="Special Room Deal">
-    </div>
-    <div id="whychooseus" class="about">
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="whychooseus" class="about">
         <img src="images/about-us-2.jpg" alt="About Us">
-        <div class='about-p'>
+        <div class="about-p">
             <h1>WHY CHOOSE US</h1>
             <p>Hotel Swarnachuda provides an exceptional combination of modern amenities and traditional hospitality. Our well-maintained rooms, top-tier dining and bar, and excellent location make us the perfect choice for business and leisure travelers alike.</p>
             <ol>
@@ -154,128 +182,139 @@
                 <li>Equipped with a modern lift for convenient access to all floors.</li>
             </ol>
         </div>
-    </div>
-    
-    <h1 style="text-align: center; margin-bottom: 20px;">Customer Feedback</h1>
-    <div class="clirev">
-        <span class="espan"><i class="fspan fa-4x far fa-smile-beam"></i>
-            <p>"A truly relaxing and enjoyable experience. The staff was welcoming and helpful at every step!"</p>
-        </span>
-        <span class="espan"><i class="fspan fa-4x far fa-heart"></i>
-            <p>"The food was amazing, especially the Chandini, Chicken Handi, and Chilly Chicken, and the ambiance was delightful. Highly recommended!"</p>
-        </span>
-        <span class="espan"><i class="fspan fa-4x far fa-thumbs-up"></i>
-            <p>"The rooms were spacious, clean, and luxurious. A perfect stay for our vacation."</p>
-        </span>
-        <span class="espan"><i class="fspan fa-4x far fa-star"></i>
-            <p>"Top-notch service, beautiful location, and great value for money. Will definitely return!"</p>
-        </span>
-    </div>
+    </section>
+
+    <!-- Customer Feedback Section -->
+    <section class="customer-feedback">
+        <h1>Customer Feedback</h1>
+        <div class="feedback-container">
+            <div class="feedback-item">
+                <i class="fas fa-heart"></i>
+                <p>"The food was amazing, especially the Chandini, Chicken Handi, and Chilly Chicken, and the ambiance was delightful. Highly recommended!"</p>
+                <p class="reviewer-name">- Tapan</p>
+            </div>
+            <div class="feedback-item">
+                <i class="fas fa-smile-beam"></i>
+                <p>"A truly relaxing and enjoyable experience. The staff was welcoming and helpful at every step!"</p>
+                <p class="reviewer-name">- Raja</p>
+            </div>
+            <div class="feedback-item">
+                <i class="fas fa-thumbs-up"></i>
+                <p>"The rooms were spacious, clean, and luxurious. A perfect stay for our vacation."</p>
+                <p class="reviewer-name">- Priya</p>
+            </div>
+            <div class="feedback-item">
+                <i class="fas fa-star"></i>
+                <p>"Top-notch service, beautiful location, and great value for money. Will definitely return!"</p>
+                <p class="reviewer-name">- Rashmi</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Rate Us Section -->
-    <div class="rate-us">
-        <h2 style="text-align: center; margin: 30px 0 10px;">Rate Us on Google Maps</h2>
-        <p style="text-align: center; font-size: 1.1rem; margin-bottom: 20px;">
-            Your feedback helps us serve you better! Click below to share your experience.
-        </p>
-        <div style="text-align: center;">
+    <section class="rate-us">
+        <h2>Rate Us on Google Maps</h2>
+        <p>Your feedback helps us serve you better! Click below to share your experience.</p>
+        <div class="rate-button-container">
             <a href="https://maps.app.goo.gl/SMDh3PXdhRhzDvoi9" target="_blank" class="rate-button">
                 Rate Us on Google Maps
             </a>
         </div>
-    </div>
+    </section>
 
-    <div id="founder" class="staff">
+    <!-- Founder Section -->
+    <section id="founder" class="staff">
         <h1>OUR FOUNDER</h1>
         <p>
             Hotel Swarnachuda was founded by Er. Damodar Mohapatra, a visionary entrepreneur with a mission to provide world-class education and hospitality services in Odisha. 
             Born on 25th March 1945, he was also the founder of Nilgiri Engineering Co-operative Society Ltd, Balasore, and the co-founder of Swarnachud College, Mitrapur, Balasore. 
             He passed away on 26th December 2006. Since 2023, his death anniversary has been celebrated at Swarnachud College near his statue, in the presence of the Member of Legislative Assembly of Nilgiri, as a tribute to his remarkable contributions.
         </p>
-        
-        <br>
-        <div class="divimg">
+        <div class="founder-image">
             <img src="images/team-2-1.jpg" alt="Founder">
         </div>
-    </div>
+    </section>
 
-    
+    <!-- Footer -->
     <footer>
         <div class="footer">
-            <div class="foo1">
+            <div class="footer-section foo1">
                 <h1>Hotel Swarnachuda</h1>
                 <p>At Hotel Swarnachuda, we believe in offering memorable experiences to our guests through impeccable service and modern amenities.</p>
-                <ul class="social-links list-inline list-unstyled">
-                    <li class="list-inline-item"><a href="#"><span><i class="fa fa-facebook"></i></span></a></li>
-                    <li class="list-inline-item"><a href="#"><span><i class="fa fa-twitter"></i></span></a></li>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 </ul>
             </div>
-            <div id="contact" class="foo3">
+            <div id="contact" class="footer-section foo3">
                 <h1>CONTACT US</h1>
                 <p><i class="fa fa-map-marker"></i> Near Bus Stand, Sahadevkhuntha, Railway Colony, Balasore, Odisha 756001</p>
                 <p>
-                    <i class="fa fa-phone fa-flip-horizontal" style="margin-right: 5px;"></i> 
+                    <i class="fa fa-phone fa-flip-horizontal"></i> 
                     <a href="tel:+916782262657">+91 6782 262657</a>
                 </p>
-                
-                <a href="mailto:swarnachuda@yahoo.com"><i class="fa fa-envelope"></i> swarnachuda@yahoo.com</a>
+                <p><i class="fa fa-envelope"></i> <a href="mailto:swarnachuda@yahoo.com">swarnachuda@yahoo.com</a></p>
             </div>
         </div>
         <div class="footer2">
             <span class="foo2a">&copy; 2024 Hotel Swarnachuda. All Rights Reserved.</span>
-            <span class="foo2b">Designed by <span onclick="location.href='https://github.com/spsaswat'">Saswat Panda</span></span>
+            <span class="foo2b">Designed by <a href="https://github.com/spsaswat">Saswat Panda</a></span>
         </div>
     </footer>
-<script src="fonts/all.js"></script>
 
-<script>
-    function swapImages() {
-      const desktopImage = document.querySelector('.imag.desktop');
-      const mobileImage  = document.querySelector('.imag.mobile');
-      
-      // Check the current window width
-      const screenWidth = window.innerWidth;
-      
-      // Decide which image to show based on width
-      if (screenWidth <= 560) {
-        desktopImage.style.display = 'none';
-        mobileImage.style.display = 'block';
-      } else {
-        desktopImage.style.display = 'block';
-        mobileImage.style.display = 'none';
-      }
-    }
+    <!-- External Scripts -->
+    <script src="fonts/all.js"></script>
 
-    // Run swapImages when the page is fully loaded
-    document.addEventListener('DOMContentLoaded', swapImages);
-
-    // (Optional) Run swapImages on window resize to handle dynamic resizing
-    window.addEventListener('resize', swapImages);
-  </script>
-
-<script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll(".slides img");
-
-    function showSlide(n) {
-        slides.forEach((slide, index) => {
-            slide.classList.remove("active");
-            if (index === n) {
-                slide.classList.add("active");
+    <!-- Image Swap Script -->
+    <script>
+        function swapImages() {
+            const desktopImage = document.querySelector('.imag.desktop');
+            const mobileImage  = document.querySelector('.imag.mobile');
+            
+            // Check the current window width
+            const screenWidth = window.innerWidth;
+            
+            // Decide which image to show based on width
+            if (screenWidth <= 560) {
+                desktopImage.style.display = 'none';
+                mobileImage.style.display = 'block';
+            } else {
+                desktopImage.style.display = 'block';
+                mobileImage.style.display = 'none';
             }
+        }
+
+        // Run swapImages when the page is fully loaded
+        document.addEventListener('DOMContentLoaded', swapImages);
+
+        // Run swapImages on window resize to handle dynamic resizing
+        window.addEventListener('resize', swapImages);
+    </script>
+
+    <!-- Carousel Script -->
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".slides img");
+
+        function showSlide(n) {
+            slides.forEach((slide, index) => {
+                slide.classList.remove("active");
+                if (index === n) {
+                    slide.classList.add("active");
+                }
+            });
+        }
+
+        function plusSlides(n) {
+            slideIndex += n;
+            if (slideIndex >= slides.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            showSlide(slideIndex);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            showSlide(slideIndex);
         });
-    }
-
-    function plusSlides(n) {
-        slideIndex += n;
-        if (slideIndex >= slides.length) slideIndex = 0;
-        if (slideIndex < 0) slideIndex = slides.length - 1;
-        showSlide(slideIndex);
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-        showSlide(slideIndex);
-    });
-</script>
+    </script>
 </body>
 </html>
