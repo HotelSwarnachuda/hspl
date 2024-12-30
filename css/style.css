@@ -129,6 +129,17 @@ ul {
     left: 0; /* Move underline to align with text */
 }
 
+.nav-item.default-hover {
+    color: #F4A460; /* Same as hover color */
+    transform: scale(1.1); /* Slightly enlarge */
+}
+
+.nav-item.default-hover::after {
+    width: 100%; /* Same as hover underline effect */
+    left: 0;
+}
+
+
 /* Responsive Design */
 @media (max-width: 700px) {
     .nav-list {
@@ -206,15 +217,15 @@ ul {
 /* Animation Keyframes for "Welcome" (Origin-To-Right) */
 @keyframes slideOriginToRightMob {
     0% {
-        transform: translateX(-10%); 
+        transform: translateX(-15%); 
         opacity: 0; /* Start fully transparent */
     }
     50% {
-        transform: translateX(30%); 
+        transform: translateX(10%); 
         opacity: 1; /* Fully visible */
     }
     100% {
-        transform: translateX(75%); 
+        transform: translateX(60%); 
         opacity: 0; /* Fade out as it leaves */
     }
 }

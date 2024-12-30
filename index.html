@@ -23,7 +23,7 @@
             <li class="nav-item"><a href="#rooms">ROOMS</a></li>
             <li class="nav-item"><a href="#whychooseus">WHY CHOOSE US</a></li>
             <li class="nav-item"><a href="#founder">FOUNDER</a></li>
-            <li class="nav-item"><a href="#contact">CONTACT US</a></li>
+            <li class="nav-item" id="contactNav"><a href="#contact">CONTACT US</a></li>
         </ul>
     </nav>
 
@@ -276,6 +276,29 @@
 
     <!-- External Scripts -->
     <script src="fonts/all.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navItems = document.querySelectorAll(".nav-item");
+            const contactNav = document.getElementById("contactNav");
+
+            // Add the default hover effect to the "CONTACT US" button
+            contactNav.classList.add("default-hover");
+
+            // Add a click event listener to all navigation items
+            navItems.forEach((item) => {
+                item.addEventListener("click", function () {
+                    // Remove the default hover class from "CONTACT US"
+                    contactNav.classList.remove("default-hover");
+
+                    // // Optionally, highlight the clicked item
+                    // navItems.forEach((nav) => nav.classList.remove("default-hover"));
+                    // this.classList.add("default-hover");
+                });
+            });
+        });
+
+    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
