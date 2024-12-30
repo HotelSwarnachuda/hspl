@@ -186,19 +186,36 @@ ul {
     /* border-radius: 5px; Optional: Round corners */
 }
 
-/* Animation Keyframes for "Welcome" */
-@keyframes pulse {
+/* Animation Keyframes for "Welcome" (Origin-To-Right) */
+@keyframes slideOriginToRight {
     0% {
-        transform: scale(1); /* Normal size */
-        opacity: 1; /* Fully visible */
+        transform: translateX(0); 
+        opacity: 0; /* Start fully transparent */
     }
     50% {
-        transform: scale(1.1); /* Slightly larger */
-        opacity: 0.8; /* Slightly faded */
+        transform: translateX(100%); 
+        opacity: 1; /* Fully visible */
     }
     100% {
-        transform: scale(1); /* Back to normal size */
-        opacity: 1; /* Fully visible again */
+        transform: translateX(300%); 
+        opacity: 0; /* Fade out as it leaves */
+    }
+}
+
+
+/* Animation Keyframes for "Welcome" (Origin-To-Right) */
+@keyframes slideOriginToRightMob {
+    0% {
+        transform: translateX(-10%); 
+        opacity: 0; /* Start fully transparent */
+    }
+    50% {
+        transform: translateX(30%); 
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        transform: translateX(75%); 
+        opacity: 0; /* Fade out as it leaves */
     }
 }
 
@@ -206,7 +223,9 @@ ul {
 #wel {
     font-size: 2rem;
     margin-bottom: 50px;
-    animation: pulse 3s infinite ease-in-out; /* Apply continuous animation */
+    animation: slideOriginToRight 3s infinite ease-in-out; /* Right-to-left animation */
+    white-space: nowrap; /* Prevent text wrapping */
+    display: inline-block; /* Ensure the animation applies only to the text */
 }
 
 #h1 {
@@ -224,6 +243,7 @@ ul {
     #wel {
         font-size: 1.5rem;
         margin-bottom: 115px;
+        animation: slideOriginToRightMob 3s infinite ease-in-out; /* Right-to-left animation */
     }
 
     #h1 {
