@@ -75,42 +75,78 @@ ul {
 
 
 /* -------------------------------Navigation----------------------------- */
+/* Navigation Bar Styling */
 .nav {
     position: sticky;
     top: 0;
     width: 100%;
     background-color: #000;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
 }
 
+/* Navigation List */
 .nav-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 10px 0;
+    padding: 15px 0; /* Add padding for better spacing */
+    margin: 0;
 }
 
+/* Navigation Items */
 .nav-item {
-    margin: 0 15px;
+    margin: 0 20px; /* Increase spacing between items */
     font-size: 1.2rem;
     color: #fff;
-    transition: color 0.3s;
+    font-weight: 600; /* Make the text slightly bolder */
+    text-transform: uppercase; /* Uniform uppercase text */
+    transition: color 0.3s, transform 0.2s; /* Smooth color and hover effects */
+    position: relative; /* For hover underline effect */
 }
 
+/* Hover Effect: Color and Scale */
 .nav-item:hover {
     color: #F4A460; /* Sandy Brown */
+    transform: scale(1.1); /* Slightly enlarge item on hover */
 }
 
+/* Hover Effect: Underline Animation */
+.nav-item::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Position underline slightly below text */
+    left: 50%; /* Start at the middle */
+    width: 0; /* Hidden by default */
+    height: 2px; /* Thin underline */
+    background-color: #F4A460; /* Match hover color */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth underline animation */
+}
+
+.nav-item:hover::after {
+    width: 100%; /* Expand underline on hover */
+    left: 0; /* Move underline to align with text */
+}
+
+/* Responsive Design */
 @media (max-width: 700px) {
     .nav-list {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items */
     }
 
     .nav-item {
-        margin: 10px 0;
+        margin: 10px 0; /* Reduce vertical spacing */
     }
 }
+
+/* Mobile Friendly: Add Background on Scroll */
+.nav.scrolled {
+    background-color: rgba(0, 0, 0, 0.9); /* Slightly transparent */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
 
 /* -------------------------------Slider----------------------------- */
 .slider {
