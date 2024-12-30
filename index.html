@@ -277,6 +277,17 @@
     <!-- External Scripts -->
     <script src="fonts/all.js"></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const welcomeText = document.getElementById("wel");
+
+            // Stop the animation after 1 minute (60000 milliseconds)
+            setTimeout(() => {
+                welcomeText.style.animation = "none"; // Remove the animation
+            }, 60000);
+        });
+    </script>
+
     <!-- Image Swap Script -->
     <script>
         function swapImages() {

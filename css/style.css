@@ -186,9 +186,27 @@ ul {
     /* border-radius: 5px; Optional: Round corners */
 }
 
+/* Animation Keyframes for "Welcome" */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Normal size */
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        transform: scale(1.1); /* Slightly larger */
+        opacity: 0.8; /* Slightly faded */
+    }
+    100% {
+        transform: scale(1); /* Back to normal size */
+        opacity: 1; /* Fully visible again */
+    }
+}
+
+/* Style for "Welcome" Animation */
 #wel {
     font-size: 2rem;
     margin-bottom: 50px;
+    animation: pulse 3s infinite ease-in-out; /* Apply continuous animation */
 }
 
 #h1 {
