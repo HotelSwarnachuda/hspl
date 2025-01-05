@@ -285,6 +285,24 @@ ul {
     margin: 10px;
 }
 
+/* Initial link styling */
+.bspan a {
+    color: #000; /* Default text color */
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+.bspan a:hover {
+    background-color: #FF6347; /* Tomato red background */
+    color: #fff; /* White text */
+    transform: scale(1.1); /* Slightly increase size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    cursor: pointer;
+}
+
 .hotelsym {
     font-size: 4rem;
     background-color: red;
